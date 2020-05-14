@@ -1,0 +1,44 @@
+<div class="jumbotron1" >
+  <app-header></app-header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+  <form #bankForm="ngForm">
+    <div *ngIf="bankForm.submitted && !isValid">
+      <p style="color: red;">Please enter all the details!</p>
+    </div>
+  <div class="form-group">
+    <label>ACCOUNT NUMBER : </label>
+    <input type="text" required class="form-control" id="accountNo" name="accountNo"
+      [(ngModel)]="accountNo">
+  </div>
+
+  <div class="form-group">
+    <label>ACCOUNT HOLDER'S NAME : </label>
+    <input class="form-control" id="holderName" name="holderName" [(ngModel)]="holderName">
+  </div>
+
+  <div class="form-group">
+    <label>IFSC CODE : </label>
+    <input class="form-control" id="ifscCode" name="ifscCode" [(ngModel)]="ifscCode">
+  </div>
+
+  <div class="form-group">BANK NAME :
+    <br>
+    <select class="browser-default custom-select" id="bankName" name="bankName" [(ngModel)]="bankName">
+      <option value="AXIS Bank">AXIS Bank</option>
+      <option value="State Bank of India">State bank of India</option>
+      <option value="Uco Bank">UCO Bank</option>
+      <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+      <option value="Syndicate Bank">Syndicate Bank</option>
+      <option value="Bank of Baroda">Bank of Baroda</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary btn-lg btn-block" type="submit" value="AddBank" (click)="validate()">Submit</button>
+
+</form>
+</div>
+</div>

@@ -1,0 +1,10 @@
+body
+{
+	background-image:url(./images/wallet.jpg);
+	height:15cm;
+	background-repeat: no-repeat;
+	background-color: blue;
+}
+a{
+	color:whitesmoke;
+}

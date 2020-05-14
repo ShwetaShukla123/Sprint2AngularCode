@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="bg-img">
+    <div *ngIf="!isValidFlag && f1.submitted">
+      <h3 style="color:red">Please fill all the details!</h3>
+    </div>
+    <div class="container">
+      <br>
+    <b>
+          <h2 style="text-align: center;">Transfer Money</h2>
+        </b>
+        <b>
+          <h4 style="text-align: center;">Send Money for financial/buisness transaction or payment</h4>
+        </b>
+        
+        <form #f1="ngForm" (ngSubmit)="isValid()">
+          <div class="form-group">
+            <label for="amount"><b>Enter Amount :</b></label>
+            <input type="text" class="form-control col-sm-12" [(ngModel)]="amount" name="amount">
+            <label for="accountId"><b>Receiver Account Id:</b></label>
+            <input type="text" class="form-control col-sm-12" [(ngModel)]="accountId" name="accountId">
+          </div>
+          <input type="radio" value="Financial Transaction" name="transferType" [(ngModel)]="transferType"
+            style="font-size: large;"><b>Financial Transaction</b>
+          <br>
+          <input type="radio" value="Buisness Transaction" name="transferType" [(ngModel)]="transferType"
+            style="font-size: large;"><b>Buisness Transaction</b>
+          <br>
+          <input type="radio" value="Payment" name="transferType" [(ngModel)]="transferType"
+            style="font-size: large;"><b>Payment</b>
+          <br><br>
+          <button type="submit" class="btn btn-info" style="align-items: center;">
+            <h2> Transfer Money</h2>
+          </button>
+        </form>
+    </div>
+  </div>
+</body>
+
+</html>

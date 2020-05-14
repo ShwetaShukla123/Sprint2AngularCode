@@ -1,0 +1,74 @@
+<div style="background-color: lightsteelblue;">
+    <form class="text-center border border-light p-5">
+        <br>
+        <p class="h4 mb-4">Pay Your Bill</p>
+
+        <p>Pay using our app, We are simple, but only with the fastest Payment ...</p>
+
+
+        <!-- BillNo -->
+        <input type="text" id="defaultSubscriptionFormPassword" class="form-control offset-2 col-sm-8"
+            placeholder="Enter your Bill No" name="billNo" [(ngModel)]="billNo" />
+        <br>
+        <!-- Sign in button -->
+        <button mdbBtn color="black" block="true" type="submit" class="btn btn-info" (click)="Search()">Proceed to Pay</button>
+
+    </form>
+
+</div> 
+
+<!-- <div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table style="width: 100%;" >
+                <thead>
+                    <tr>
+                        <th>Billno</th>
+                        <th>Holdername</th>
+                        <th>Connectioncode</th>
+                        <th>Billamount</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{billDetails.billNo}}</td>
+                        <td>{{billDetails.holderName}}</td>
+                        <td>{{billDetails.connectionCode}}</td>
+                        <td>{{billDetails.billAmount}}</td>
+                        <button mdbBtn color="black" block="true" class="btn btn-primary" type="submit" (click)="Paybill()">Pay Bill</button>
+
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div> -->
+    <div class="container">
+        <div class="row h-100 justify-content-center align-items-center">
+        <table class="table">
+          <thead>
+            <tr>
+                <th>Bill No</th>
+                <th>Holder Name</th>
+                <th>Connection Code</th>
+                <th>Bill Amount</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>{{billDetails.billNo}}</td>
+                <td>{{billDetails.holderName}}</td>
+                <td>{{billDetails.connectionCode}}</td>
+                <td>{{billDetails.billAmount}}</td>
+                <button mdbBtn color="black" block="true" class="btn btn-primary" type="submit" (click)="Paybill()">Pay Bill</button>
+
+            </tr>
+        </tbody>
+    </table>  
+</div>
+
+</div> 

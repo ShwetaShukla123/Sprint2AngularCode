@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <br>
+  <h1 style="color:whitesmoke;text-align: center;"><b>Online Wallet</b></h1>
+  <br>
+  <br>
+  <h3 style="color:whitesmoke;text-align: center;"><i>Login</i></h3>
+  <br>
+  <div class="container jumbotron offset-4 col-4">
+    <form #f1="ngForm" method="get" (ngSubmit)="validate()">
+      <div *ngIf="f1.submitted && !isValid">
+        <p style="color: red;">Enter correct userid and password</p>
+      </div>
+      <div *ngIf="f1.submitted && !isRightUser">
+        <p style="color: red;">UserId or Password is incorrect</p>
+      </div>
+      <div class="form-group">
+        <label for="userid"> <b>UserId</b> </label>
+        <input type="text" class="form-control" [(ngModel)]="userId" id="userId" name="userId" #UID="ngModel" required>
+        <div *ngIf="f1.submitted && UID.invalid">
+          <div *ngIf="UID.errors.required">*UserId is Required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password"> <b>Password</b> </label>
+        <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password" #PWD="ngModel"
+          required>
+        <div *ngIf="f1.submitted && PWD.invalid">
+          <div *ngIf="PWD.errors.required">*Password is Required</div>
+        </div>
+      </div>
+      <input type="submit" class="btn btn-success bt-md col-sm-4" value="Submit">
+    </form>
+    
+  </div>
+  <br>
+</div>

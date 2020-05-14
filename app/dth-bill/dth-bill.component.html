@@ -1,0 +1,67 @@
+<!-- <html>
+
+<body>
+  <div class="jumbotron">
+    <h3 style="text-align: center;">Pay DTH BILL</h3>
+    <h3 style="text-align: center;">from</h3>
+    <h1 style="text-align: center;">Online Wallet</h1>
+  </div>
+  <div class="text-center"></div>
+  <div class="container h-90">
+    <div class="row h-100 justify-content-center align-items-center">
+      <form #f1="ngForm" method="get" (ngSubmit)="payMoney()">
+        <div class="form-group">
+
+          <label for="amount"><b>Customer Name:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="custname" name="custname">
+          <label for="amount"><b>Phone Number:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="custphno" name="custphno">
+          <label for="amount"><b>Bill Amount:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="amount" name="amount">
+
+        </div>
+        <button type="submit" class="btn btn-info" style="align-items: center;">
+          <h2> Click to Pay</h2>
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html> -->
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="bg-img">
+    <div class="container">
+      <br>
+      <b>
+        <h2 style="text-align: center;">Pay DTH Bill from</h2>
+      </b>
+      <b>
+        <h2 style="text-align: center;">Online Wallet</h2>
+      </b>
+      <br>
+      <form #f1="ngForm" method="get" (ngSubmit)="payMoney()">
+        <div class="form-group">
+
+          <label for="amount"><b>Customer Name:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="custname" name="custname">
+          <label for="amount"><b>Phone Number:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="custphno" name="custphno">
+          <label for="amount"><b>Bill Amount:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="amount" name="amount">
+
+        </div>
+        <button type="submit" class="btn btn-info" style="align-items: center;">
+          <h2> Click Here to Pay</h2>
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

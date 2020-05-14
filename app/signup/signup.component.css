@@ -1,0 +1,9 @@
+.container-fluid
+{
+    height: 15.6cm;
+    background-image:url(./images/wallet7.jpg);
+    background-repeat: no-repeat;
+}
+.jumbotron{
+    padding:2rem 2rem;
+}

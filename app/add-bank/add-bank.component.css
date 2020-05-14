@@ -1,0 +1,27 @@
+.form-control
+{
+    width:30%;
+    align-content: center;
+}
+.btn-primary
+{
+    background-color: teal;
+    width: 30%;
+}
+.jumbotron1
+{
+    background-image: url(./images/bg.jpg);
+    height:100vh;
+}
+
+.custom-select
+{
+    width:30%;
+}
+.navbar{
+    height:8%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <br>
+  <h1 style="color:whitesmoke;text-align: center;"><b>Online Wallet</b></h1>
+  <hr>
+  <h3 style="color:whitesmoke;text-align: center;"><i>Sign Up</i></h3>
+  <br>
+  <h1 style="text-align: center; color: indigo;"></h1>
+
+  <div class="container jumbotron offset-4 col-4">
+    <form #f1="ngForm" method="get" (ngSubmit)="validate()">
+      <div *ngIf="f1.submitted && !isValid">
+        <p style="color: red;">Please enter all the fields</p>
+      </div>
+      <div *ngIf="f1.submitted && !isNewUser">
+        <p style="color: red;">This UserId already exists!</p>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="userId" id="userId" name="userId" #UID="ngModel" placeHolder="User Id" required>
+        <div *ngIf="f1.submitted && UID.invalid">
+          <div *ngIf="UID.errors.required">*UserId is Required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="userName" id="userName" name="userName" #Uname="ngModel"
+          required placeholder="User Name">
+        <div *ngIf="f1.submitted && Uname.invalid">
+          <div *ngIf="Uname.errors.required">*UserName is Required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password" #PWD="ngModel"
+          required placeholder="Password">
+        <div *ngIf="f1.submitted && PWD.invalid">
+          <div *ngIf="PWD.errors.required">*Password is Required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="phoneNumber" id="phoneNumber" name="phoneNumber"
+          #PNO="ngModel" required placeholder="Mobile Number">
+        <div *ngIf="f1.submitted && PNO.invalid">
+          <div *ngIf="PNO.errors.required">*Mobile Number is Required</div>
+        </div>
+      </div>
+      <input type="submit" class="btn btn-success bt-md col-sm-4" value="Submit">
+    </form>
+  </div>
+
+</div>

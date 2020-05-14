@@ -1,0 +1,81 @@
+<!-- <div class="jumbotron">
+    <h3 style="text-align: center;">Add Money to</h3>
+    <h1 style="text-align: center;">Online Wallet</h1>
+    <h3 style="text-align: center;"> Available balance &#x20B9;{{balance}}</h3>
+</div>
+  
+  <br>
+  <div *ngIf="!valid">
+    <h2 style="color: red; text-align: center;">Please add your bank account!</h2>
+  </div>
+  <div class="text-center">
+  </div>
+  <div class="container h-90">
+    <div class="row h-100 justify-content-center align-items-center">
+  <form  #f1="ngForm" (ngSubmit)="addMoney()" >
+  <div class="form-group">
+    <label for="amount"><h3>Enter Amount:</h3></label>
+   <input type="text" class="form-control col-sm-12"  [(ngModel)]="amount" name="amount">
+  </div>
+  <button type="submit" id="addButton" class="btn btn-info" style="align-items: center;">
+    <h2> Proceed to Add Money</h2>
+  </button>
+  </form>
+</div>
+</div> -->
+
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  
+  <div class="bg-img">
+    <div *ngIf="!isValidFlag && f1.submitted">
+      <h3 style="color:red">Please Enter the amount!</h3>
+    </div>
+    <div *ngIf="!valid">
+      <h2 style="color: red; text-align: center;">Please add your bank account!</h2>
+      <button (click)="back()">Back</button>
+    </div>
+    <div *ngIf="f1.submitted">
+      <button (click)="back()">Back</button>
+    </div>
+    <div class="container">
+
+      <br>
+      <br>
+      <b>
+        <h2 style="text-align: center;">Add Money to</h2>
+      </b>
+      <b>
+        <h2 style="text-align: center;">Online Wallet</h2>
+      </b>
+      <div *ngIf="flag">
+        <b>
+          <h2 style="text-align: center;">Available Balance &#x20B9;{{balance}}</h2>
+        </b>
+       </div>
+      
+      <br>
+      <form #f1="ngForm" (ngSubmit)="isValid()">
+        <div class="form-group">
+
+          <label for="amount"><b>Enter Amount:</b></label>
+          <input type="text" class="form-control col-sm-12" [(ngModel)]="amount" name="amount">
+        </div>
+        <button type="submit" id="addButton" class="btn btn-primary" style="align-items: center;">
+          <b>
+            <h3> Add Money</h3>
+          </b>
+        </button>
+      </form>
+    </div>
+    
+  </div>
+  
+</body>
+</html>
